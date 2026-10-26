@@ -1,0 +1,65 @@
+/* Nebula Glass — Haze
+ *
+ * Android (Spicetify for Morphe): only two things are read from this file —
+ *   the colours come from color.ini, and the background image comes from the
+ *   `body { background: url(...) }` rule below. Keep that rule at the top level
+ *   and keep the URL absolute, or Android won't find the image.
+ *
+ * Desktop: everything below applies — real frosted glass (backdrop-filter)
+ *   and JetBrains Mono. Spotify's class names change between versions, so
+ *   desktop selectors may need updating.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+body {
+  background: #0d0a1f url("https://raw.githubusercontent.com/Aang497/nebula-glass/main/assets/nebula.jpg") center / cover no-repeat fixed;
+}
+
+:root {
+  /* Desktop reads card = #80082838 as 800828; restore the intended colour. */
+  --spice-card: #082838 !important;
+  --spice-rgb-card: 8, 40, 56 !important;
+  --glass-rgb: 8, 40, 56;
+  --glass-alpha: 0.5;
+  --glass-edge: rgba(165, 243, 252, 0.16);
+  --glass-blur: 18px;
+}
+
+/* ---------- desktop only ---------- */
+
+body,
+body * {
+  font-family: "JetBrains Mono", ui-monospace, monospace !important;
+}
+
+/* Let the wallpaper show through Spotify's own panels, dimmed for legibility. */
+.Root__top-container {
+  background: rgba(0, 0, 0, 0.45) !important;
+}
+
+.Root__main-view,
+.Root__nav-bar,
+.Root__right-sidebar,
+.Root__now-playing-bar,
+.main-view-container__scroll-node,
+.main-topBar-background,
+.main-home-homeHeader,
+.main-entityHeader-backgroundColor,
+.main-actionBarBackground-background {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Frosted glass tiles and panels. */
+.main-card-card,
+.view-homeShortcutsGrid-shortcut,
+.main-yourLibraryX-libraryContainer,
+.main-nowPlayingBar-nowPlayingBar,
+.Root__right-sidebar > * {
+  background: rgba(var(--glass-rgb), var(--glass-alpha)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  border: 1px solid var(--glass-edge);
+  border-radius: 12px;
+}

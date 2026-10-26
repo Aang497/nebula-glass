@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Nebula Glass — Nebula",
+    "description": "Violet smoked-glass tiles over a purple nebula wallpaper. Works on desktop and Spicetify for Android (Morphe).",
+    "preview": "assets/nebula.jpg",
+    "readme": "README.md",
+    "usercss": "nebula/user.css",
+    "schemes": "nebula/color.ini",
+    "authors": [{ "name": "Aang497", "url": "https://github.com/Aang497" }],
+    "tags": ["dark", "glass", "wallpaper", "android"]
+  },
+  {
+    "name": "Nebula Glass — Ink",
+    "description": "Black smoked-glass tiles over a monochrome manga wallpaper. Works on desktop and Spicetify for Android (Morphe).",
+    "preview": "assets/ink.jpg",
+    "readme": "README.md",
+    "usercss": "ink/user.css",
+    "schemes": "ink/color.ini",
+    "authors": [{ "name": "Aang497", "url": "https://github.com/Aang497" }],
+    "tags": ["dark", "glass", "wallpaper", "monochrome", "android"]
+  },
+  {
+    "name": "Nebula Glass — Haze",
+    "description": "Teal glass tiles and a cyan accent over the nebula wallpaper. Works on desktop and Spicetify for Android (Morphe).",
+    "preview": "assets/nebula.jpg",
+    "readme": "README.md",
+    "usercss": "haze/user.css",
+    "schemes": "haze/color.ini",
+    "authors": [{ "name": "Aang497", "url": "https://github.com/Aang497" }],
+    "tags": ["dark", "glass", "wallpaper", "android"]
+  }
+]
